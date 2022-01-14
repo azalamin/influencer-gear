@@ -207,6 +207,20 @@ body {
 }
 
 /*=====================================
+========= Responsive Custom Menu CSS 
+=======================================*/
+
+#nav-toggler {
+  display: none;
+}
+#menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+
+/*=====================================
 ========= Footer Part CSS 
 =======================================*/
 
@@ -239,11 +253,88 @@ body {
 =====================================================*/
 
 @media (max-width: 992px) {
+  .top-banner-text h1 {
+    font-size: 45px;
+  }
   .card-collection {
     grid-template-columns: repeat(2, 1fr);
   }
   .brand-identity {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 }
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navigation {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    background: #0a0826;
+    text-align: center;
+    display: block;
+    transform: translateY(-450px);
+    transition: 0.2s ease-in-out;
+  }
+  #nav-toggler:checked ~ .navigation {
+    transform: translateY(0);
+  }
+  .navigation li {
+    margin: 16px;
+  }
+  .navigation li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    background: #18135a;
+    transition: 0.3s;
+  }
+  .navigation li a:hover {
+    background: #06023a;
+  }
+  .top-banner,
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-banner-text {
+    order: 2;
+    margin-top: 50px;
+    text-align: center;
+  }
+  .card-collection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .brand-identity {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 476px) {
+  .nav-logo h3 {
+    font-size: 20px;
+  }
+  .top-banner-text h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 340px) {
+  .nav-logo h3 {
+    font-size: 16px;
+  }
+  .top-banner-text h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .brand-identity {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* =============================================================================================================################## THE END!
+============================================================================================*/
